@@ -1,19 +1,24 @@
 import React from 'react';
-import { Row, Col } from 'react-materialize';
-import { Container, Grid } from '@material-ui/core';
+import {
+    Container,
+    Row,
+    Col
+} from 'react-materialize';
 
-import './App.css';
-import Login from './components/Login';
+
+import './assets/css/App.css';
+import Login from './components/Login/index';
+import img from './assets/img/loginWallpaper.png';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App cover" style={{ backgroundImage: `url("${img}")` }}>
         <Container>
-            <Grid container justify='center'>
-                <Grid item xs={12} sm={8} md={4}>
+            <Row>
+                <Col s={10} m={4} offset='s1 m4'>
                     <Login />
-                </Grid>
-            </Grid>
+                </Col>
+            </Row>
         </Container>
     </div>
   );

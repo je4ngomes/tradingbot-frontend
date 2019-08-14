@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 95%;
+}
+
+.inputField:focus + label {
+    color: #F7931A !important;
+}
+
+.inputField {
+    color: #000;
+}
+
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: relative;
+}
+input[type="checkbox"].filled-in:checked + span:not(.lever):after {
+    border: 2px solid #F7931A;  
+    background-color: #F7931A;
+}
+
+/* label underline focus color */
+.inputField:focus {
+    border-bottom: 1px solid #F7931A !important;
+    box-shadow: 0 1px 0 0 #F7931A !important;
+}
+
+.cover {
+    position: fixed;
+    background: center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+}
