@@ -23,7 +23,7 @@ const LoginForm = ({ onSubmit }) => {
                     <TextInput
                         noLayout
                         password
-                        label='Password'
+                        label='Senha'
                         className='inputField'/>
                 </Col>
             </Row>

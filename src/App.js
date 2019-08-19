@@ -1,25 +1,22 @@
 import React from 'react';
-import {
-    Container,
-    Row,
-    Col
-} from 'react-materialize';
-
+import { 
+    BrowserRouter as Router, 
+    Switch, 
+    Route } from 'react-router-dom'
 
 import './assets/css/App.css';
-import Login from './components/Login/index';
-import img from './assets/img/loginWallpaper.png';
+import LoginPage from './pages/LoginPage';
+import DashboardPage from './pages/DashboardPage';
 
 function App() {
   return (
-    <div className="App cover" style={{ backgroundImage: `url("${img}")` }}>
-        <Container>
-            <Row>
-                <Col s={10} m={4} offset='s1 m4'>
-                    <Login />
-                </Col>
-            </Row>
-        </Container>
+    <div className="App">
+        <Router>
+            <Switch>
+                <Route exact path='/' component={LoginPage} />
+                <Route path='/dashboard' component={DashboardPage} />
+            </Switch>
+        </Router>       
     </div>
   );
 }

@@ -2,12 +2,12 @@ import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 
 import LoginForm from './LoginForm';
-import Paper from '../shared/Paper';
+import Pane from '../layout/Pane';
 
 const useStyles = makeStyles({
     h4: {
         textAlign: 'center',
-        color: '#ffb74d'
+        color: '#ff9800'
     }
 });
 
@@ -19,13 +19,13 @@ export default () => {
     }
 
     return (
-        <Paper depth={2} style={{ background: '#fff' }}>
+        <Pane bg='#304454'>
             <div>
                 <h3 className={classes.h4}>Login</h3>
             </div>
             <div>
                 <LoginForm onSubmit={handleSubmit} />           
             </div>
-        </Paper>
+        </Pane>
     );
 };
